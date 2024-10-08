@@ -1,0 +1,789 @@
+/* Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+/* Pop-up Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* On top of other elements */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with transparency */
+    justify-content: center;
+    align-items: center;
+    overflow: auto; /* Enable scrolling if needed */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin:0;
+    padding: 20px;
+    border-radius: 0;
+    max-width: 440px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    color: #040404;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #f60202;
+}
+
+/* Image Styling */
+.popup-image {
+    width: 100%; /* Make image responsive */
+    height: 100%;
+    border-radius: 0;
+}
+
+
+
+/* Header */
+header {
+    background-color: #004b87;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2px;
+}    
+
+.logo img {
+    width: 150px;
+    height: 150px;
+
+}
+.school-name h1{
+    padding: 1px;
+    color: #fff;
+    font-size: 24px; /* Adjust the size so it fits */
+    white-space: nowrap; /* Prevents the text from wrapping */
+    overflow: hidden; /* Hides text that overflows */
+    text-overflow: ellipsis; /* Adds "..." if text is too long */
+    /* Apply Old English Font to the heading */
+    font-family:'Old English Five', sans-serif;
+    position:relative ;
+    /*right: 150px;*/
+    
+}
+.school-name p{
+    font-size: 20px;
+    color: #ddd;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style:none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+/* Dropdown Menu Hidden Initially */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Dropdown Links */
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Styling for the image slider */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    display: none;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    color: white;
+    padding-top: 70%;
+}
+
+.slide.active {
+    display: block;
+    padding-top: 40%;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls span {
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Styling for the notice board container */
+.notice-board-container {
+    width: 100%;
+    max-width: 200%;
+    padding: 20px;
+    background-color: #034956;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.notice-board-container h2 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Styling for the notice board */
+.notice-board {
+    overflow:hidden;
+    width: 100%;
+    height: 50px; /* Adjust the height */
+    background-color: #fff;
+    padding: 10px ;
+    border-top: 2px solid #006400; 
+    border-bottom: 2px solid #006400;
+    position: relative;
+}
+
+/* Notice list styles */
+.notice-board ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    position: relative;
+    width: max-content;
+    animation: scroll-horizontal 20s linear infinite; /* 10-second scroll animation */
+}
+
+.notice-board ul li {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #c91616;
+    padding: 10px 20px;
+    padding-bottom: 25px;
+}
+
+/* CSS Animation for vertical scrolling */
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%); /* Start from the right side */
+    }
+    100% {
+        transform: translateX(-100%); /* Move to the left, scrolling all items */
+    }
+}
+
+
+
+/* About Section */
+#about {
+    padding: 3rem;
+    background-color: #f4f4f4;
+    text-align:center;
+}
+
+/* Academics Section */
+#academics {
+    padding: 3rem;
+    background-color: #fff;
+    text-align:center;
+}
+
+/* Admissions Section */
+#admissions {
+    padding: 3rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+#events {
+    padding: 3rem;
+    background-color: #fff;
+    text-align: center;
+}
+.btn {
+    display:inline-table;
+    background-color: #004b87;
+    color: white;
+    padding: 10px 20px;
+    text-decoration:double;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+}
+
+.btn:hover {
+    background-color: #003b6e;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    background-color: #004b87;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+/* Basic Styling */
+/* You can add additional styles specific to the History page here */
+.about{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.about-us h1 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.about-us p {
+    line-height: 1.8;
+}
+
+
+/* Principal's Message */
+.principal-message {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.principal-message h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.principal-message img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 50%;
+    width: 150px;
+}
+
+.principal-message p {
+    line-height: 1.8;
+}
+
+/* History Section */
+.history {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.history h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.history p {
+    line-height: 1.8;
+}
+/* Basic Styles for Member Cards */
+.members-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(50px); /* Initial position for animation */
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.member-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.member-card h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.member-card p {
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+/* Active class to trigger animation */
+.member-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.achievements h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.achievements ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.achievements ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #004b87;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Achievements Section */
+.achievements {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+.achievements h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.achievements ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.achievements ul li {
+    margin-bottom: 10px;
+}
+
+
+/* Academic Overview Section */
+.academics-overview {
+    text-align: center;
+    margin-bottom: 2rem;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+}
+
+.academics-overview h1 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.academics-overview p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* Academic Programs Section */
+.academic-programs h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.academic-programs .program {
+    margin-bottom: 1.5rem;
+}
+
+.academic-programs h3 {
+    color: #00bfa5;
+    margin-bottom: 0.5rem;
+}
+
+/* Curriculum and Subjects */
+.curriculum-subjects {
+    margin: 2rem 0;
+}
+
+.curriculum-subjects h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.curriculum-subjects ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.curriculum-subjects ul li {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Facilities Section */
+.facilities h2, .extracurricular h2 {
+    color: #004b87;
+    margin-bottom: 1rem;
+}
+
+.facilities ul, .extracurricular ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.facilities ul li, .extracurricular ul li {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+/* Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Events Overview Section */
+.events-overview {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.events-overview h1 {
+    color: #004b87;
+    margin-bottom: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.events-overview p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Upcoming and Past Events Section */
+section h2 {
+    color: #004b87;
+    border-bottom: 2px solid #00bfa5;
+    margin-bottom: 20px;
+    font-size: 28px;
+    padding-bottom: 10px;
+}
+
+.event {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.event h3 {
+    color: #00bfa5;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.event p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .events-overview h1 {
+        font-size: 26px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    .event h3 {
+        font-size: 20px;
+    }
+
+    .event p {
+        font-size: 14px;
+    }
+}
+/* Basic Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/*admission*/
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+/* Section Titles */
+section h2 {
+    color: #004b87;
+    border-bottom: 2px solid #00bfa5;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+section p, section ul, section ol {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Ordered and Unordered Lists */
+ul, ol {
+    padding-left: 20px;
+}
+
+ul li, ol li {
+    margin-bottom: 10px;
+}
+
+ul li::marker, ol li::marker {
+    color: #00bfa5;
+}
+
+/* Link Styling */
+a {
+    color: #00bfa5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+/* General form styling */
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+legend {
+    color: #004b87;
+    font-size: 20px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #004b87;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #00bfa5;
+}
+
+/* Error handling for phone number */
+input[type="tel"]::placeholder {
+    color: #999;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Responsive form layout */
+@media (max-width: 768px) {
+    form {
+        padding: 10px;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+    grid-gap: 20px; /* Space between grid items */
+    padding: 20px;
+}
+    /* Styling each section */
+    .grid-item {
+        background-color: #f7f7f7;
+        border: 1px solid #ccc;
+        padding: 40px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        transition: background-color 0.3s ease;
+    }
+
+    /* Hover effect for sections 
+    .grid-item:hover {
+        background-color: #e0e0e0;
+    }*/
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 768px) {
+        .grid-container {
+            grid-template-columns: 1fr; /* 1 column layout for mobile */
+        }
+    }
+
+    /* Styling for section titles 
+    .grid-item h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+*/
+    .grid-item p {
+        font-size: 16px;
+        color: #555;
+    }
+
